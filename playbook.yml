@@ -1,0 +1,24 @@
+---
+- hosts: test, dev
+  remote_user: root
+  
+  tasks:
+    - name: Instalar requisitos    
+      apt: name={{item}} state=latest update_cache=yes
+      loop: [ 'apt-transport-https', 'ca-certificates', 'curl', 'software-properties-common', 'python3-pip', 'virtualenv', 'python3-setuptools']   
+    
+    - name: Instalar modulo docker para python3
+      pip:
+        name: docker, docker-compose        
+
+    - name: Descargamos proyecto          
+      git:
+        repo: 'https://github.com/xavimf87/covid-stats.git'
+        dest: /apps/covid-stats-{{ ansible_hostname }} 
+        version: '{{ ansible_hostname }}' # Nombre de la branch       
+
+    - name: "Iniciamos proyecto"
+      docker_compose:
+        project_src: /apps/covid-stats-{{ ansible_hostname }}
+        build: yes
+      
