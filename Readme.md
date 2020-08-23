@@ -24,6 +24,8 @@ Se usa Vagrant, Ansible, Git y docker para aprovisionar las máquinas.
 
 2. `vagrant init`
 
+3. `vagrant plugin install vagrant-docker-compose`
+
 3. `vagrant up`
 
 4. Acceder al proyecto web:
