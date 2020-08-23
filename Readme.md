@@ -4,7 +4,7 @@
 
 Desplegamos el aprovisionamiento de dos máquinas que se llaman igual que las branch del proyecto:
 
-[https://github.com/xavimf87/covid-stats](url)
+[https://github.com/xavimf87/covid-stats](https://github.com/xavimf87/covid-stats)
 
 Se usa Vagrant, Ansible, Git y docker para aprovisionar las máquinas.
 
