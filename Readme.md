@@ -22,9 +22,7 @@ Se usa Vagrant, Ansible, Git y docker para aprovisionar las máquinas.
 
 1. `git clone https://github.com/xavimf87/ejemplo-entornos-test-dev.git && cd ejemplo-entornos-test-dev`
 
-2. `vagrant init`
-
-3. `vagrant plugin install vagrant-docker-compose`
+2. `vagrant plugin install vagrant-docker-compose`
 
 3. `vagrant up`
 
